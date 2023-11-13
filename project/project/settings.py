@@ -35,6 +35,10 @@ ALLOWED_HOSTS = env('HOSTS').split(',')
 # Application definition
 
 INSTALLED_APPS = [
+    #Custom Apps
+    'bikini_bottom',
+
+    # Django Apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,9 +53,6 @@ INSTALLED_APPS = [
     # Crispy Form
     "crispy_forms",
     "crispy_bootstrap5",
-
-    #Custom Apps
-    'bikini_bottom',
 ]
 
 MIDDLEWARE = [
@@ -65,6 +66,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'project.urls'
+LOGIN_REDIRECT_URL = '/'
 
 TEMPLATES = [
     {
